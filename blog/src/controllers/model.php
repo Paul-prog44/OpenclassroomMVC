@@ -44,7 +44,7 @@ function getPost($identifier) {
     }
  
     $statement = $database->prepare(
-        "SELECT id, title, content, DATE_FORMAT(creation_date, '%d/%m/%Y à %Hh%imin%ss') 
+        "SELECT id, title, content, DATE_FORMAT(french_creation_date, '%d/%m/%Y à %Hh%imin%ss') 
         AS french_creation_date FROM posts WHERE id = ?"
     );
     $statement->execute([$identifier]);
